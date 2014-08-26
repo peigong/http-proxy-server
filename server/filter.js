@@ -18,12 +18,14 @@ module.exports = function(options){
             if(item.active && item.filename){
                 var filename = path.join(base, item.filename);
                 fs.stat(filename, function(err, stat){
-                    if(!err){
+                    if(err){
+                        next(err);
+                    }else{
                         console.log('hold:%s', req.url);
                         var stream = fs.createReadStream(filename);
                         stream.pipe(res);
+                        next();
                     }
-                    next(err);
                 });
             }else{
                 next();
