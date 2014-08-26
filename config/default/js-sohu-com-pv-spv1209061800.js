@@ -2,7 +2,8 @@
     var topAds = document.getElementById('ad_TOP');
     if(topAds){
         topAds.style.height = '90px';
-        topAds.innerHTML = '<div style="width:965px;overflow:hidden;"><a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a></div>';
+        topAds.style.background = '#ffffff';
+        topAds.innerHTML = '<div style="width:930px;overflow:hidden;"><a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a></div>';
     }
 })();
 
