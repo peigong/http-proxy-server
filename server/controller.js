@@ -26,7 +26,7 @@ module.exports = function(options){
     var app = express();
     app.use(express.favicon());
     app.use(express.compress());
-    app.use(express.router);
+    app.use(app.router);
 
     app.get('/start/:id', control(true));
     app.get('/stop/:id', control(false));
