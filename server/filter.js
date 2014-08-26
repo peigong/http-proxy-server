@@ -15,21 +15,26 @@ module.exports = function(options){
             target = [host, req.url].join('');
 
         if(base && items && items.length){
+            var o = null;
             items.map(function(item){
                 if(item.active && item.filename && (target.indexOf(item.target) > -1)){
-                    var filename = path.join(base, item.filename);
-                    fs.stat(filename, function(err, stat){
-                        if(err){
-                            next(err);
-                        }else{
-                            console.log('hold:%s', req.url);
-                            var stream = fs.createReadStream(filename);
-                            stream.pipe(res);
-                            break;
-                        }
-                    });
+                    o = item;
                 }
             });
+            if(o){
+                var filename = path.join(base, o.filename);
+                fs.stat(filename, function(err, stat){
+                    if(err){
+                        next(err);
+                    }else{
+                        console.log('hold:%s', req.url);
+                        var stream = fs.createReadStream(filename);
+                        stream.pipe(res);
+                    }
+                });
+            }else{
+                next();
+            }
         }else{
             next();
         }
