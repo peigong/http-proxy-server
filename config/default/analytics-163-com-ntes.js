@@ -3,6 +3,8 @@
         var topAds = document.getElementsByClassName('ad-area') || [];
         if(topAds.length){
             var o = topAds[0];
+            o.style.border = '1px solid #cccccc';
+            o.style.background = '#ffffff';
             o.style.height = '90px';
             o.innerHTML = '<a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a>';
         }
