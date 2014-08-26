@@ -15,7 +15,6 @@ var items = require(path.join(base, 'items.json'));
 if(dir && items){
     var app = express();
     app.use(express.favicon());
-    app.use(express.compress());
     app.use('/ctrl', controller({ base: base, items: items }));
     app.use(filter({ base: base, items: items }));
     app.use(proxy);

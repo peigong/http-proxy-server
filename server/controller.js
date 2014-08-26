@@ -23,8 +23,6 @@ module.exports = function(options){
     }
 
     var app = express();
-    app.use(express.favicon());
-    app.use(express.compress());
     app.use(app.router);
 
     app.get('/start/:id', control(true));
