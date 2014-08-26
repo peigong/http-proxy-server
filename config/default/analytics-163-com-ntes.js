@@ -2,7 +2,9 @@
     if(document.getElementsByClassName){
         var topAds = document.getElementsByClassName('adtop') || [];
         if(topAds.length){
-            topAds[0].innerHTML = '<a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a>';
+            var o = topAds[0];
+            o.style.height = '90px';
+            o.innerHTML = '<a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a>';
         }
     }
 })();

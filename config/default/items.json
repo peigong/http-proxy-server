@@ -26,7 +26,7 @@
     {
         "id": "sohu-1",
         "active": true,
-        "target": "http://images.sohu.com/bill/s2014/jscript/require-sohu.js",
-        "filename": "images-sohu-com-bill-s2014-jscript-require-sohu.js"
+        "target": "http://images.sohu.com/bill/default/mi.js",
+        "filename": "images-sohu-com-bill-default-mi.js"
     }
 ]
