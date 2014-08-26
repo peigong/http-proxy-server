@@ -1,3 +1,6 @@
+var fs = require('fs'),
+    path = require('path');
+
 module.exports = function(options){
     var base = '', id_mapping = {}, target_mapping = {};
     if(options.hasOwnProperty('items')){

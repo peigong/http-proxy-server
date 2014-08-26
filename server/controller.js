@@ -1,6 +1,5 @@
 var express   = require('express');
 
-
 module.exports = function(options){
     function control(active){
         var base = '', id_mapping = {};
