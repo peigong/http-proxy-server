@@ -27,7 +27,6 @@ module.exports = function(options){
                         console.log('hold:%s', req.url);
                         var stream = fs.createReadStream(filename);
                         stream.pipe(res);
-                        next();
                     }
                 });
             }else{
