@@ -1,6 +1,6 @@
 ﻿(function(){
     if(document.getElementsByClassName){
-        var topAds = document.getElementsByClassName('adtop') || [];
+        var topAds = document.getElementsByClassName('ad-area') || [];
         if(topAds.length){
             var o = topAds[0];
             o.style.height = '90px';
