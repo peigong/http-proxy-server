@@ -1,0 +1,12 @@
+[
+    {
+        "id": "ifeng-1",
+        "target": "http://h0.ifengimg.com/ifeng/sources/yingguang-20140307.js",
+        "filename": "ifeng-sources-yingguang-20140307.js"
+    },
+    {
+        "id": "wikipedia-1",
+        "target": "http://meta.wikimedia.org/wiki/Special:BannerRandom",
+        "filename": "meta-wikimedia-org-wiki-Special-BannerRandom.js"
+    }
+]
