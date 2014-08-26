@@ -23,6 +23,7 @@ module.exports = function(options){
             });
             if(o){
                 var filename = path.join(base, o.filename);
+                console.log(filename);
                 fs.stat(filename, function(err, stat){
                     if(err){
                         next(err);
