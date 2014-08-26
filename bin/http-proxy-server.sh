@@ -1,4 +1,4 @@
-#!/bin/sh
+﻿#!/bin/sh
 
 ACTION=$1
 PIDFILE="../http-proxy-server.pid"

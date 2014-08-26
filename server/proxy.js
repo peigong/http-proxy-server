@@ -1,4 +1,4 @@
-var httpProxy = require('http-proxy');
+﻿var httpProxy = require('http-proxy');
 
 var proxy = httpProxy.createProxyServer({});
 proxy.on('error', function(e) {

@@ -1,4 +1,4 @@
-(function(){
+﻿(function(){
     if(document.getElementsByClassName){
         var topAds = document.getElementsByClassName('adtop') || [];
         if(topAds.length){

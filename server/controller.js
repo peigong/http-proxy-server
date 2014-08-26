@@ -1,4 +1,4 @@
-var express   = require('express');
+﻿var express   = require('express');
 
 module.exports = function(options){
     function control(active){

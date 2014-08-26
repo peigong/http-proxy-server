@@ -1,4 +1,4 @@
-mw.centralNotice.insertBanner( false );
+﻿mw.centralNotice.insertBanner( false );
 
 (function(){
     var siteNotice = document.getElementById('siteNotice');
