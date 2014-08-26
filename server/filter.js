@@ -14,6 +14,7 @@ module.exports = function(options){
         var host = ['http://', req.headers.host].join(''),
             target = [host, req.url].join('');
 
+        console.log(req.url);
         if(base && items && items.length){
             var o = null;
             items.map(function(item){
