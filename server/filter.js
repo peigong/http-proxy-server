@@ -2,12 +2,9 @@ var fs = require('fs'),
     path = require('path');
 
 module.exports = function(options){
-    var base = '', id_mapping = {}, target_mapping = {};
+    var base = '', items = [];
     if(options.hasOwnProperty('items')){
-        options.items.map(function(item){
-            id_mapping[item.id] = item;
-            target_mapping[item.target] = item;
-        });
+        items = options.items;
     }
     if(options.hasOwnProperty('base')){
         base = options.base;
@@ -16,22 +13,23 @@ module.exports = function(options){
     return function(req, res, next){
         var host = ['http://', req.headers.host].join(''),
             target = [host, req.url].join('');
-        if(target_mapping.hasOwnProperty(target) && base){
-            item = target_mapping[target];
-            if(item.active && item.filename){
-                var filename = path.join(base, item.filename);
-                fs.stat(filename, function(err, stat){
-                    if(err){
-                        next(err);
-                    }else{
-                        console.log('hold:%s', req.url);
-                        var stream = fs.createReadStream(filename);
-                        stream.pipe(res);
-                    }
-                });
-            }else{
-                next();
-            }
+
+        if(base && items && items.length){
+            items.map(function(item){
+                if(item.active && item.filename && (target.indexOf(item.target) > -1)){
+                    var filename = path.join(base, item.filename);
+                    fs.stat(filename, function(err, stat){
+                        if(err){
+                            next(err);
+                        }else{
+                            console.log('hold:%s', req.url);
+                            var stream = fs.createReadStream(filename);
+                            stream.pipe(res);
+                            break;
+                        }
+                    });
+                }
+            });
         }else{
             next();
         }
