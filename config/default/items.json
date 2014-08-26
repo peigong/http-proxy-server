@@ -1,14 +1,32 @@
 [
     {
+        "id": "wikipedia-1",
+        "active": true,
+        "target": "http://meta.wikimedia.org/wiki/Special:BannerRandom",
+        "filename": "meta-wikimedia-org-wiki-Special-BannerRandom.js"
+    },
+    {
         "id": "ifeng-1",
         "active": true,
         "target": "http://h0.ifengimg.com/ifeng/sources/yingguang-20140307.js",
         "filename": "ifeng-sources-yingguang-20140307.js"
     },
     {
-        "id": "wikipedia-1",
+        "id": "sina-1",
         "active": true,
-        "target": "http://meta.wikimedia.org/wiki/Special:BannerRandom",
-        "filename": "meta-wikimedia-org-wiki-Special-BannerRandom.js"
+        "target": "http://i1.sinaimg.cn/unipro/pub/suda_m_v629.js",
+        "filename": "i1-sinaimg-cn-unipro-pub-suda_m_v629.js"
+    },
+    {
+        "id": "163-1",
+        "active": true,
+        "target": "http://analytics.163.com/ntes.js",
+        "filename": "analytics-163-com-ntes.js"
+    },
+    {
+        "id": "sohu-1",
+        "active": true,
+        "target": "http://images.sohu.com/bill/s2014/jscript/require-sohu.js",
+        "filename": "images-sohu-com-bill-s2014-jscript-require-sohu.js"
     }
 ]
