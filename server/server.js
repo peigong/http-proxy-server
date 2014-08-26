@@ -7,7 +7,7 @@ var controller = require('./controller.js'),
     filter = require('./filter.js');
 
 var config = path.resolve(__dirname, '..', '..', '..', 'config');
-var settings = require(path.join(base, 'settings.json'));
+var settings = require(path.join(config, 'settings.json'));
 //拦截过滤器的配置目录
 var dir = settings.filter;
 var base = path.join(config, dir);
