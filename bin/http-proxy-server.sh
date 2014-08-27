@@ -22,7 +22,6 @@ start(){
     if [ ! -z $pid ]; then
         echo 'server is already running'
     else
-        npm install
         nohup node ../server/server.js > /dev/null &
         echo 'server is running ...'
         echo $! > $PIDFILE

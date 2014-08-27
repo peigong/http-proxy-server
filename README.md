@@ -32,6 +32,7 @@
 
 进入`proxy/bin`目录，可以使用以下命令：
 
+- `sh ./server-install.sh`：安装NPM依赖
 - `sh ./http-proxy-server.sh start`：启动
 - `sh ./http-proxy-server.sh stop`：停止
 - `sh ./http-proxy-server.sh restart`：重启
