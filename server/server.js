@@ -1,5 +1,5 @@
 ﻿var path = require('path'),
-    cluster = require('cluster');
+    cluster = require('cluster/index.js');
 var createServer = require('./app.js').createServer;
 
 var root =  path.resolve(__dirname, '..', '..', '..');
