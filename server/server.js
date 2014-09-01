@@ -1,27 +1,23 @@
 ﻿var path = require('path'),
-    http = require('http'),
-    express   = require('express');
+    cluster = require('cluster');
+var createServer = require('./app.js').createServer;
 
-var controller = require('./controller.js'),
-    proxy = require('./proxy.js'),
-    filter = require('./filter.js');
+var root =  path.resolve(__dirname, '..', '..', '..');
+var configDir = path.resolve(root, 'config'),
+    logDir = path.resolve(root, 'logs'),
+    pidDir = path.resolve(root, 'pids');
 
-var config = path.resolve(__dirname, '..', '..', '..', 'config');
-var settings = require(path.join(config, 'settings.json'));
-//拦截过滤器的配置目录
-var dir = settings.filter;
-var base = path.join(config, dir);
-var items = require(path.join(base, 'items.json'));
-if(dir && items){
-    var app = express();
-    app.use(express.favicon());
-    app.use('/ctrl', controller({ base: base, items: items }));
-    app.use(filter({ base: base, items: items }));
-    app.use(proxy);
+var server = createServer(configDir);
 
-    var node = http.createServer(app);
-    node.listen(80);
-    console.log('server is running!');    
+if(server){
+  cluster(server)
+    .use(cluster.logger(logDir, 'debug'))
+    .use(cluster.debug())
+    .use(cluster.stats())
+    .use(cluster.pidfiles(pidDir))
+    .use(cluster.cli())
+    .use(cluster.repl(8888))
+    .listen(80);
 }else{
-    console.log('config error.')
+  console.log('over!')
 }
