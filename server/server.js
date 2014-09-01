@@ -9,6 +9,8 @@ var configDir = path.resolve(root, 'config'),
 
 var server = createServer(configDir);
 
+console.log(cluster);
+
 if(server){
   cluster(server)
     .use(cluster.logger(logDir, 'debug'))
