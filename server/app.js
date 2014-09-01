@@ -1,4 +1,5 @@
-var http = require('http'),
+var path = require('path'),
+    http = require('http'),
     express   = require('express');
 
 var controller = require('./controller.js'),

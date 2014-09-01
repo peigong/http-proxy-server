@@ -16,7 +16,7 @@ if(server){
     .use(cluster.stats())
     .use(cluster.pidfiles(pidDir))
     .use(cluster.cli())
-    .use(cluster.repl(8888))
+    .use(cluster.repl(10080))
     .listen(80);
 }else{
   console.log('over!')
