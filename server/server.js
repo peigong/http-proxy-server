@@ -22,5 +22,5 @@ if(dir && items){
     app.use(proxy);
 
     var node = http.createServer(app);
-    server.listen(80);
+    node.listen(80);
 }
