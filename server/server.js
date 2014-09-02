@@ -23,4 +23,7 @@ if(dir && items){
 
     var node = http.createServer(app);
     node.listen(80);
+    console.log('http proxy server running!');
+}else{
+    console.log('http proxy server config error!');
 }
