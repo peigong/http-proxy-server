@@ -21,10 +21,12 @@ if(dir && items){
     app.use('/ctrl', controller({ base: base, items: items }));
     app.use(filter({ base: base, items: items }));
     app.use(proxy);
-    app.listen(80);
 
-    //var node = http.createServer(app);
-    //node.listen(80);
+    var node = http.createServer(app);
+    node.on('listening',function(){
+        console.log('ok, http proxy server is running!');
+    });
+    node.listen(80);
     console.log('http proxy server running!');
 }else{
     console.log('http proxy server config error!');
