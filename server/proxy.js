@@ -7,6 +7,6 @@ proxy.on('error', function(e) {
 
 module.exports = function(req, res, next){
     var host = ['http://', req.headers.host].join('');
-    console.log(['proxy:', host].join(''));
+    console.log('proxy:', host, ' ip:', req.ip);
     proxy.web(req, res, { target: host });
 };
