@@ -24,6 +24,11 @@ module.exports = function(options){
 
     var app = express();
     app.use(app.router);
+    app.use(function(err, req, res, next){
+        if(err){
+            console.error(err);
+        }
+    });
 
     app.get('/start/:id', control(true));
     app.get('/stop/:id', control(false));

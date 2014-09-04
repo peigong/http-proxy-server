@@ -2,7 +2,7 @@
 
 var proxy = httpProxy.createProxyServer({});
 proxy.on('error', function(e) {
-    console.log(e);
+    console.error(e);
 });
 
 module.exports = function(req, res, next){
