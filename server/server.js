@@ -17,12 +17,13 @@ var items = require(path.join(base, 'items.json'));
 if(dir && items){
     var app = express();
     app.use(express.favicon());
-    //app.use(express.logger());
+    app.use(express.logger());
     app.use('/ctrl', controller({ base: base, items: items }));
     app.use(filter({ base: base, items: items }));
     app.use(proxy);
     app.use(function(err, req, res, next){
         if(err){
+            console.error('server app use error');
             console.error(err);
         }
     });
