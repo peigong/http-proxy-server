@@ -11,6 +11,8 @@ module.exports = function(options){
     }
 
     return function(req, res, next){
+console.log(base);
+console.log(items);
         var host = ['http://', req.headers.host].join(''),
             target = [host, req.url].join('');
 
@@ -21,6 +23,7 @@ module.exports = function(options){
                     o = item;
                 }
             });
+console.log(o);
             if(o){
                 var filename = path.join(base, o.filename);
                 fs.stat(filename, function(err, stat){
