@@ -23,7 +23,6 @@ if(dir && items){
     app.use(proxy);
     app.use(function(err, req, res, next){
         if(err){
-            console.error('server app use error');
             console.error(err);
         }
     });
