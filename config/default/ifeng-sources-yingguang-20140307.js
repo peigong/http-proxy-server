@@ -3,7 +3,7 @@
     ad_width *= 1;
     ad_height *= 1;
     if((980 === ad_width) && (90 === ad_height)){
-        document.write('<div style="text-align:left;"><a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a></div>');
+        document.write('<div style="text-align:center;"><a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a></div>');
     }else if (/\.swf$/.test(ad.toLowerCase())) {  
         (function(flash_ad, flash_a, flash_w, flash_h, flash_isActive){
             var id = "flash_click_" + Math.ceil(Math.random() * 1000000);
