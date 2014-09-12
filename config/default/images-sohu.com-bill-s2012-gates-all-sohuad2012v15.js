@@ -22,7 +22,7 @@ SohuAd.engine.test = function(beans){
             }
         }
     }
-}
+};
 (function(){
     function FCR(){
         var that = this;
