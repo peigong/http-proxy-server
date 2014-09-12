@@ -3,7 +3,7 @@
     function FCR(){
         var that = this;
         that.tasks = [];
-        setTimeout(function(){
+        setInterval(function(){
             var o, tasks = [], task = that.tasks.pop();
             while(task){
                 o = task.scan();
