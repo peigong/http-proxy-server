@@ -50,9 +50,9 @@ SohuAd.engine.test = function(beans){
         }, 
         function(o){
             if(o && o.nodeType && (1 === o.nodeType)){
-                topAds.style.height = '90px';
-                topAds.style.background = '#ffffff';
-                topAds.innerHTML = '<div style="width:930px;overflow:hidden;"><a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a></div>';
+                o.style.height = '90px';
+                o.style.background = '#ffffff';
+                o.innerHTML = '<div style="width:930px;overflow:hidden;"><a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a></div>';
             }
         }
     );
