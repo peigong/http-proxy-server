@@ -20,13 +20,13 @@
     {
         "id": "163-1",
         "active": true,
-        "target": "http://analytics.163.com/ntes.js",
-        "filename": "analytics-163-com-ntes.js"
+        "target": "http://img3.cache.netease.com/cnews/js/ntes_jslib_1.0.2.js",
+        "filename": "img3-cache-netease-com-cnews-js-ntes_jslib_1.0.2.js"
     },
     {
         "id": "sohu-1",
         "active": true,
-        "target": "http://js.sohu.com/pv/spv1209061800.js",
-        "filename": "js-sohu-com-pv-spv1209061800.js"
+        "target": "http://images.sohu.com/bill/s2012/gates/all/sohuad2012v15.js",
+        "filename": "images-sohu.com-bill-s2012-gates-all-sohuad2012v15.js"
     }
 ]
