@@ -39,7 +39,7 @@ SohuAd.engine.test = function(beans){
     }
     FCR.prototype = {
         add: function(scan, fire){
-            that.tasks.push({ scan: scan, fire: fire });
+            this.tasks.push({ scan: scan, fire: fire });
         }
     };
     var radar = new FCR();
