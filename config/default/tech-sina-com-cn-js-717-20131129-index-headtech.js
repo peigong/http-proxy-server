@@ -109,7 +109,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^
             var o, tasks = [], task = that.tasks.pop();
             while(task){
                 o = task.scan();
-                if(o){ task.fire(o); }else{ tasks.push(o); }
+                if(o){ task.fire(o); }else{ tasks.push(task); }
                 task = that.tasks.pop();
             }
             that.tasks = tasks;

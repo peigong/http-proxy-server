@@ -7,7 +7,7 @@ function _sohu_pvinsight_click(a,b){typeof _click_tpl_url!="undefined"?__pvFun.c
             var o, tasks = [], task = that.tasks.pop();
             while(task){
                 o = task.scan();
-                if(o){ task.fire(o); }else{ tasks.push(o); }
+                if(o){ task.fire(o); }else{ tasks.push(task); }
                 task = that.tasks.pop();
             }
             that.tasks = tasks;
