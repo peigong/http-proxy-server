@@ -50,10 +50,13 @@ SohuAd.engine.test = function(beans){
         }, 
         function(o){
             if(o && o.nodeType && (1 === o.nodeType)){
-                var ele = document.createElement('div');
-                ele.innerHTML = '<div style="width:930px;height:90px;overflow:hidden;background:#ffffff;"><a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a></div>';
-                document.body.insertBefore(ele, o);
-                document.body.removeChild(o);
+                var parent = o.parentElement;
+                if(parent){
+                    var ele = document.createElement('div');
+                    ele.innerHTML = '<div style="width:930px;height:90px;overflow:hidden;background:#ffffff;"><a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a></div>';
+                    parent.insertBefore(ele, o);
+                    parent.removeChild(o);
+                }
             }
         }
     );
