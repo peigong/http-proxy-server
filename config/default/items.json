@@ -18,6 +18,12 @@
         "filename": "d1-sina-com-cn-js-index-14-sync.js"
     },
     {
+        "id": "sina-2",
+        "active": true,
+        "target": "http://tech.sina.com.cn/js/717/20131129/index/headtech.js",
+        "filename": "tech-sina-com-cn-js-717-20131129-index-headtech.js"
+    },
+    {
         "id": "163-1",
         "active": true,
         "target": "http://img3.cache.netease.com/cnews/js/ntes_jslib_1.0.2.js",
@@ -26,7 +32,7 @@
     {
         "id": "sohu-1",
         "active": true,
-        "target": "http://images.sohu.com/bill/s2012/gates/all/sohuad2012v15.js",
-        "filename": "images-sohu.com-bill-s2012-gates-all-sohuad2012v15.js"
+        "target": "http://js.sohu.com/pv/pvclick1211071116.js",
+        "filename": "js-sohu-com-pv-pvclick1211071116.js"
     }
 ]
