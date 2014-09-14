@@ -53,7 +53,10 @@ SohuAd.engine.test = function(beans){
                 var parent = o.parentElement;
                 if(parent){
                     var ele = document.createElement('div');
-                    ele.innerHTML = '<div style="width:930px;height:90px;overflow:hidden;background:#ffffff;"><a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a></div>';
+                    ele.style.width = '950px';
+                    ele.style.margin = '0px auto 0px auto';
+                    ele.style.overflow = 'hidden';
+                    ele.innerHTML = '<a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-970x90.jpg" /></a>';
                     parent.insertBefore(ele, o);
                     parent.removeChild(o);
                 }
