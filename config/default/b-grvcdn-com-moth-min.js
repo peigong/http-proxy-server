@@ -28,24 +28,27 @@ b&&b&&j(b);return{cc:function(a,b,d){if(""!==a){var e=new Date;e.setTime(e.getTi
     var radar = new FCR();
     radar.add(
         function(){
-            var o = document.getElementById('fi_572995151') || false;
+            var o = {};
+            if(document.getElementsByClassName){
+                var topAds = document.getElementsByClassName('topAd') || [];
+                if(topAds.length){
+                    o = topAds[0];
+                }else{
+                    o = false;
+                }
+            }
             return o;
         }, 
         function(o){
-            if(o && o.nodeType && (1 === o.nodeType)){
-                var parent = o.parentElement;
-                if(parent){
-                    var ele = document.createElement('div');
-                    ele.className = 'adwrap di refreshNO';
-                    ele.style.border = '1px solid #cccccc';
-                    //ele.style.margin = '20px auto 0px auto';
-                    ele.style.textAlign = 'center';
-                    ele.innerHTML = '<a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-300x250.jpg" /></a>';
-                    parent.innerHTML = '';
-                    parent.appendChild(ele);
-                    //parent.insertBefore(ele, o);
-                    //parent.removeChild(o);
-                }
+            if(o && o.appendChild){
+                var ele = document.createElement('div');
+                ele.className = 'adwrap di refreshNO';
+                ele.style.border = '1px solid #cccccc';
+                //ele.style.margin = '20px auto 0px auto';
+                ele.style.textAlign = 'center';
+                ele.innerHTML = '<a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-300x250.jpg" /></a>';
+                o.innerHTML = '';
+                o.appendChild(ele);
             }
         }
     );
