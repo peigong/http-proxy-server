@@ -44,8 +44,8 @@ b&&b&&j(b);return{cc:function(a,b,d){if(""!==a){var e=new Date;e.setTime(e.getTi
                 var ele = document.createElement('div');
                 ele.className = 'adwrap di refreshNO';
                 ele.style.border = '1px solid #cccccc';
-                //ele.style.margin = '20px auto 0px auto';
-                ele.style.textAlign = 'center';
+                ele.style.width = '300px';
+                ele.style.height = '250px';
                 ele.innerHTML = '<a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-300x250.jpg" /></a>';
                 o.innerHTML = '';
                 o.appendChild(ele);
