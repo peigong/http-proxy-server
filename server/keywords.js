@@ -19,10 +19,10 @@ module.exports = function(options){
                 query = url.parse(req.url, true).query;
                 if(query && query[key]){
                     word = query[key];
-                    console.log(word);
+                    console.log('keywords word:' + word);
                     if(word && keywords[word]){
                         id = keywords[word];
-                        console.log(id);
+                        console.log('keywords id:' + id);
                         if(id && id_mapping[id]){
                             item = id_mapping[id];
                             item.active = true;
