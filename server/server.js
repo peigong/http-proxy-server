@@ -22,9 +22,11 @@ if(dir && items){
     //app.use(express.logger());
     app.use('/ctrl', controller({ base: base, items: items }));
     app.use(filter({ base: base, items: items }));
+    /*
     if(keywordsSettings){
         app.use(keywords({ base: base, items: items, settings: keywordsSettings }));
     }
+    */
     app.use(proxy);
     app.use(function(err, req, res, next){
         if(err){
