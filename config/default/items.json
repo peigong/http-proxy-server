@@ -50,7 +50,7 @@
     {
         "id": "aol-1",
         "active": true,
-        "target": "http://b.grvcdn.com/moth-min.js",
-        "filename": "b-grvcdn-com-moth-min.js"
+        "target": "http://o.aolcdn.com/ads/adsWrapper.js",
+        "filename": "o-aolcdn-com-ads-adsWrapper.js"
     }
 ]
