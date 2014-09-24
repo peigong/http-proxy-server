@@ -1,4 +1,4 @@
-
+﻿
 var adsLo;
 try {adsLo=top.location.href}
 catch (e){}
