@@ -15,7 +15,7 @@ var settings = require(path.join(configDir, 'settings.json'));
 var dir = settings.filter;
 var base = path.join(configDir, dir);
 var items = require(path.join(base, 'items.json'));
-var keywordsSettings = require(path.join(configDir, 'keywords.json'));
+//var keywordsSettings = require(path.join(configDir, 'keywords.json'));
 if(dir && items){
     var app = express();
     app.use(express.favicon());
