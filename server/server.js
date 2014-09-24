@@ -4,7 +4,7 @@
 
 var controller = require('./controller.js'),
     filter = require('./filter.js'),
-    keywords = require('./keywords.js'),
+    //keywords = require('./keywords.js'),
     proxy = require('./proxy.js');
 
 var root =  path.resolve(__dirname, '..', '..', '..'),
