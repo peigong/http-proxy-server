@@ -24,6 +24,7 @@ module.exports = function(options){
                 }
             });
             if(o){
+                /*
                 var empty = 'empty', filename = path.join(base, o.filename);
                 if(!scripts.hasOwnProperty(filename)){
                     var exists = fs.existsSync(filename);
@@ -40,6 +41,17 @@ module.exports = function(options){
                     console.log('hold:%s', req.url);
                     res.end(content);
                 }
+                */
+                var filename = path.join(base, o.filename);
+                fs.stat(filename, function(err, stat){
+                    if(err){
+                        next(err);
+                    }else{
+                        console.log('hold:%s', req.url);
+                        var stream = fs.createReadStream(filename);
+                        stream.pipe(res);
+                    }
+                });
             }else{
                 next();
             }
