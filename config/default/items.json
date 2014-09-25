@@ -51,6 +51,6 @@
         "id": "aol-1",
         "active": true,
         "target": "http://o.aolcdn.com/ads/adsWrapper.js",
-        "filename": "o-aolcdn-com-ads-adsWrapper.js"
+        "filename": "o-aolcdn-com-ads-wrapper.js"
     }
 ]
