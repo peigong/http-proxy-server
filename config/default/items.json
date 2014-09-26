@@ -68,8 +68,8 @@
     {
         "id": "thestreet-1",
         "active": true,
-        "target": "http://i.thestreet-static.com/files/tsc/v2008/js/_1411679100100/min/new-combined-lazy.js",
-        "filename": "i.thestreet-static.com-files-tsc-v2008-js_1411679100100-min-new-combined-lazy.js"
+        "target": "http://js.adsonar.com/js/adsonar.js",
+        "filename": "js.adsonar.com-js-adsonar.js"
     },
     {
         "id": "cnet-1",
