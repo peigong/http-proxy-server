@@ -45,6 +45,7 @@ module.exports = function(options){
                 var filename = path.join(base, o.filename);
                 fs.stat(filename, function(err, stat){
                     if(err){
+                        console.log('fs.stat:');
                         next(err);
                     }else{
                         console.log('hold:%s', req.url);
