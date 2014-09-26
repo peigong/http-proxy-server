@@ -14,6 +14,6 @@ module.exports = function(req, res, next){
     gReq = req;
     gRes = res;
     var host = ['http://', req.headers.host].join('');
-    //console.log('proxy:', host, ' ip:', req.ip);
-    proxy.web(req, res, { forward: host, toProxy: true });
+    //console.log('proxy:', host, ' ip:', req.ip);, toProxy: true
+    proxy.web(req, res, { forward: host });
 };
