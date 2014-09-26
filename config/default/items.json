@@ -52,5 +52,29 @@
         "active": true,
         "target": "http://o.aolcdn.com/ads/adsWrapper.js",
         "filename": "o-aolcdn-com-ads-wrapper.js"
+    },
+    {
+        "id": "cnn-1",
+        "active": true,
+        "target": "http://z.cdn.turner.com/cnn/tmpl_asset/static/intl_homepage/1301/js/intlhplib-min.js",
+        "filename": "z.cdn.turner.com-cnn-tmpl_asset-static-intl_homepage-1301-js-intlhplib-min.js"
+    },
+    {
+        "id": "cnn-2",
+        "active": true,
+        "target": "http://z.cdn.turner.com/money/.e/script/jquery.migrate/jquery.migrate.min.js",
+        "filename": "z.cdn.turner.com-money-e-script-jquery.migrate-jquery.migrate.min.js"
+    },
+    {
+        "id": "thestreet-1",
+        "active": true,
+        "target": "http://i.thestreet-static.com/files/tsc/v2008/js/_1411679100100/min/new-combined-lazy.js",
+        "filename": "i.thestreet-static.com-files-tsc-v2008-js_1411679100100-min-new-combined-lazy.js"
+    },
+    {
+        "id": "cnet-1",
+        "active": true,
+        "target": "http://cnet3.cbsistatic.com/fly/808-fly/bundles/flyjs/js/libs/require-2.1.2.js",
+        "filename": "cnet3.cbsistatic.com-fly-808-fly-bundles-flyjs-js-libs-require-2.1.2.js"
     }
 ]
