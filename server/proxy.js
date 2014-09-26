@@ -1,21 +1,19 @@
 ﻿var httpProxy = require('http-proxy');
 
 var proxy = httpProxy.createProxyServer({});
+
+var gReq, gRes;
 proxy.on('error', function(e) {
     console.log('proxy.on');
     console.error(e);
+    console.error(gReq);
+    console.error(gRes);
 });
 
 module.exports = function(req, res, next){
-    if(req.protocol != 'http'){
-        console.log(req.protocol);
-        console.log(req.host);
-    }
-    if(req.port && req.port != 80){
-        console.log(req.host);
-        console.log(req.port);
-    }
+    gReq = req;
+    gRes = res;
     var host = ['http://', req.headers.host].join('');
     //console.log('proxy:', host, ' ip:', req.ip);
-    proxy.web(req, res, { target: host });
+    proxy.web(req, res, { forward: host, toProxy: true });
 };
