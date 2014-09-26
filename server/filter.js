@@ -46,6 +46,7 @@ module.exports = function(options){
                 fs.stat(filename, function(err, stat){
                     if(err){
                         console.log('fs.stat:');
+                        console.log(filename);
                         next(err);
                     }else{
                         console.log('hold:%s', req.url);
