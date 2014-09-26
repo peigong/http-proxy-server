@@ -27,11 +27,17 @@ module.exports = function(options){
                 var filename = path.join(base, o.filename);
                 fs.stat(filename, function(err, stat){
                     if(err){
+                        console.log('fs.stat');
                         next(err);
                     }else{
                         console.log('hold:%s', req.url);
-                        var stream = fs.createReadStream(filename);
-                        stream.pipe(res);
+                        try{
+                            var stream = fs.createReadStream(filename);
+                            stream.pipe(res);
+                        }catch(ex){
+                            console.log('fs.createReadStream');
+                            console.log(ex);
+                        }
                     }
                 });
             }else{
