@@ -48,14 +48,8 @@ module.exports = function(options){
                         next(err);
                     }else{
                         console.log('hold:%s', req.url);
-                        try{
-                            var stream = fs.createReadStream(filename);
-                            stream.pipe(res);
-                        }catch(err){
-                            console.log('fs.createReadStream:');
-                            console.log(filename);
-                            next(err);
-                        }
+                        var stream = fs.createReadStream(filename);
+                        stream.pipe(res);
                     }
                 });
             }else{

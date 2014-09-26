@@ -2,6 +2,7 @@
 
 var proxy = httpProxy.createProxyServer({});
 proxy.on('error', function(e) {
+    console.log('proxy.on');
     console.error(e);
 });
 
