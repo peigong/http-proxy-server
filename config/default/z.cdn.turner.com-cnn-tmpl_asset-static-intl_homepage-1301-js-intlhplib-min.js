@@ -126,7 +126,7 @@ window._sf_async_config.domain=a;window._sf_async_config.sections=c;window._sf_a
             if(o && o.nodeType && (1 === o.nodeType)){
                 var parent = o.parentElement;
                 if(parent){
-                    var ele = document.createElement('span');
+                    var ele = document.createElement('div');
                     ele.className = '_fwac';
                     ele.style.border = '1px solid #cccccc';
                     ele.style.width = '300px';

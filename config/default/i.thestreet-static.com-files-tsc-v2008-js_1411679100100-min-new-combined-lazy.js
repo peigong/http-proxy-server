@@ -57,6 +57,7 @@
                 ele.style.border = '1px solid #cccccc';
                 ele.style.width = '300px';
                 ele.style.height = '250px';
+                ele.style.margin = '0px auto 0px auto';
                 ele.innerHTML = '<a href="http://www.localad.org.cn" target="_blank"><img src="http://www.localad.org.cn/ads/banner-300x250.jpg" /></a>';
                 o.innerHTML = '';
                 o.appendChild(ele);
