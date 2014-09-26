@@ -24,24 +24,6 @@ module.exports = function(options){
                 }
             });
             if(o){
-                /*
-                var empty = 'empty', filename = path.join(base, o.filename);
-                if(!scripts.hasOwnProperty(filename)){
-                    var exists = fs.existsSync(filename);
-                    if(exists){
-                        scripts[filename] = fs.readFileSync(filename);
-                    }else{
-                        scripts[filename] = empty;
-                    }
-                }
-                var content = scripts[filename];
-                if(empty === content){
-                    next();
-                }else{
-                    console.log('hold:%s', req.url);
-                    res.end(content);
-                }
-                */
                 var filename = path.join(base, o.filename);
                 fs.stat(filename, function(err, stat){
                     if(err){
