@@ -1,3 +1,8 @@
 ﻿{
-    "filter": "default"
+    "filter": { "settings": "filters.json", "base": "filters" },
+    "blacklist": {
+        "domains": "domains.json",
+        "urls": "urls.json",
+        "temp": "temp.json"
+    }
 }
