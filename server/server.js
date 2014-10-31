@@ -2,21 +2,20 @@
     http = require('http'),
     express   = require('express');
 
+var createConfigHandler = require('server-helpers').createConfigHandler;
+var configDir = path.resolve(__dirname, '..', '..', '..', 'config');
+var config = createConfigHandler(configDir),
+
 var controller = require('./controller.js'),
     filter = require('./filter.js'),
     //keywords = require('./keywords.js'),
     proxy = require('./proxy.js');
 
-var root =  path.resolve(__dirname, '..', '..', '..'),
-    configDir = path.resolve(root, 'config');
-
-var settings = require(path.join(configDir, 'settings.json'));
 //拦截过滤器的配置目录
-var dir = settings.filter;
-var base = path.join(configDir, dir);
-var items = require(path.join(base, 'items.json'));
+var base = path.join(configDir, config.filter.base);
+var items = require(path.join(configDir, config.filter.settings));
 //var keywordsSettings = require(path.join(configDir, 'keywords.json'));
-if(dir && items){
+if(base && items){
     var app = express();
     app.use(express.favicon());
     //app.use(express.logger());
