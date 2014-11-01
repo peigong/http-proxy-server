@@ -4,7 +4,7 @@
 
 var createConfigHandler = require('server-helpers').createConfigHandler;
 var configDir = path.resolve(__dirname, '..', '..', '..', 'config');
-var config = createConfigHandler(configDir),
+var config = createConfigHandler(configDir);
 
 var controller = require('./controller.js'),
     filter = require('./filter.js'),
