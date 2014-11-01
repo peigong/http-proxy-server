@@ -4,7 +4,9 @@
 
 var createConfigHandler = require('server-helpers').createConfigHandler;
 var configDir = path.resolve(__dirname, '..', '..', '..', 'config');
-var config = createConfigHandler(configDir);
+console.log(configDir);
+var config= createConfigHandler(configDir);
+console.log(config.settings);
 
 var controller = require('./controller.js'),
     filter = require('./filter.js'),
@@ -12,8 +14,8 @@ var controller = require('./controller.js'),
     proxy = require('./proxy.js');
 
 //拦截过滤器的配置目录
-var base = path.join(configDir, config.filter.base);
-var items = require(path.join(configDir, config.filter.settings));
+var base = path.join(configDir, config.settings.filter.base);
+var items = require(path.join(configDir, config.settings.filter.settings));
 //var keywordsSettings = require(path.join(configDir, 'keywords.json'));
 if(base && items){
     var app = express();
