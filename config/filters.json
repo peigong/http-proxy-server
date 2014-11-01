@@ -76,5 +76,11 @@
         "active": true,
         "target": "http://cnet3.cbsistatic.com/fly/808-fly/bundles/flyjs/js/libs/require-2.1.2.js",
         "filename": "cnet3.cbsistatic.com-fly-808-fly-bundles-flyjs-js-libs-require-2.1.2.js"
+    },
+    {
+        "id": "modins-1",
+        "active": true,
+        "target": "http://www.modins.net/js/scripts.js",
+        "filename": "www.modins.net-js-scripts.js"
     }
 ]
